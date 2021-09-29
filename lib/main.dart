@@ -17,9 +17,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Home(),
     );
   }
@@ -35,12 +32,56 @@ class Home extends StatelessWidget {
 
     return Obx(
       () => Scaffold(
-        backgroundColor: Colors.grey.shade100,
+        backgroundColor: Colors.white,
+        body: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            SliverAppBar(
+              pinned: true,
+              stretch: true,
+              // floating: true,
+              // snap: true,
+              elevation: 0.0,
+              backgroundColor: Colors.white,
+              expandedHeight: Get.height * 0.3,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text(
+                  'Sliver',
+                  style: TextStyle(color: Colors.black),
+                ),
+
+                centerTitle: true,
+                background: Image.network(
+                  'https://nystudio107-ems2qegf7x6qiqq.netdna-ssl.com/img/blog/_1200x675_crop_center-center_82_line/image_optimzation.jpg',
+                  fit: BoxFit.cover,
+                ),
+                //  Container(
+                //   color: Colors.black,
+                // ),
+                stretchModes: [
+                  StretchMode.fadeTitle,
+                  StretchMode.zoomBackground,
+                  StretchMode.blurBackground,
+                ],
+              ),
+            ),
+            SliverFillRemaining(
+              child: Center(
+                child: Text(
+                  'Center',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
         bottomNavigationBar: Container(
           width: Get.width,
           margin: EdgeInsets.only(
-            left: Get.width * 0.1,
-            right: Get.width * 0.1,
+            left: Get.width * 0.12,
+            right: Get.width * 0.12,
             bottom: Get.height * 0.02,
           ),
           height: Get.height * 0.1,
@@ -104,7 +145,7 @@ class Home extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: Get.height * 0.005,
+                      height: Get.height * 0.002,
                     ),
                     Text(
                       'Home',
@@ -167,7 +208,7 @@ class Home extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: Get.height * 0.005,
+                      height: Get.height * 0.002,
                     ),
                     Text(
                       'Apps',
@@ -233,7 +274,7 @@ class Home extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: Get.height * 0.005,
+                      height: Get.height * 0.002,
                     ),
                     Text(
                       'Setting',
