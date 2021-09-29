@@ -4,7 +4,7 @@ This project is a clone-coding of the GLASSMORPHISM Bottom Bar Animation from Ha
 
 Dribbble : https://dribbble.com/shots/14838798-GLASSMORPHISM-Bottom-Bar-Animation
 
-https://cdn.dribbble.com/users/245926/screenshots/14838798/media/19723c02dffaf225fe9030ef3f916777.mp4
+![image](https://user-images.githubusercontent.com/36909992/135254341-0e11cabb-e364-40fe-9fce-aa5bffebbdce.png)
 
 ## Getting Started
 
